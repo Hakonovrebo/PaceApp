@@ -1,0 +1,10 @@
+# Java build output
+*.class
+*.jar
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.idea/
+.vscode/
