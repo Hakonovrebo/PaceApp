@@ -18,7 +18,7 @@ public class PaceServer {
 
         server.setExecutor(null);
         server.start();
-        System.out.println("Server kjører på http://<pi-ip>:8020");
+        System.out.println("Server kjorer paa http://<pi-ip>:8020");
     }
 
     private static void handlePace(HttpExchange ex) throws IOException {

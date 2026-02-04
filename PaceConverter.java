@@ -10,7 +10,7 @@ public final class PaceConverter {
     // km/t (string) -> pace "mm:ss"
     public static String kmhToPace(String kmh) {
         double speed = Double.parseDouble(kmh.trim());
-        if (speed <= 0) throw new IllegalArgumentException("Fart må være > 0");
+        if (speed <= 0) throw new IllegalArgumentException("Fart maa vere > 0");
         int paceSec = (int) Math.round(3600.0 / speed);
         return formatPace(paceSec);
     }
@@ -23,11 +23,11 @@ public final class PaceConverter {
         int min = Integer.parseInt(parts[0]);
         int sec = Integer.parseInt(parts[1]);
 
-        if (min < 0) throw new IllegalArgumentException("Minutter kan ikke være negativ");
-        if (sec < 0 || sec > 59) throw new IllegalArgumentException("Sekunder må være 0-59");
+        if (min < 0) throw new IllegalArgumentException("Minutter kan ikke vere negativ");
+        if (sec < 0 || sec > 59) throw new IllegalArgumentException("Sekunder maa vere 0-59");
 
         int total = min * 60 + sec;
-        if (total == 0) throw new IllegalArgumentException("Pace kan ikke være 0");
+        if (total == 0) throw new IllegalArgumentException("Pace kan ikke vere 0");
         return total;
     }
 
